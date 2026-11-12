@@ -1,20 +1,60 @@
 {
   "id": "qqmusic",
   "name": "QQ Music",
-  "version": "0.3.0",
+  "version": "0.5.1",
   "minAppVersion": "0.1.8",
   "main": "dist/index.js",
   "playback": "stream",
-  "permissions": { "network": ["u.y.qq.com", "c.y.qq.com", "c6.y.qq.com", "y.qq.com", "xui.ptlogin2.qq.com", "ssl.ptlogin2.graph.qq.com", "graph.qq.com", "api.tencentmusic.com", "open.weixin.qq.com", "lp.open.weixin.qq.com"] },
+  "permissions": {
+    "network": [
+      "u.y.qq.com",
+      "c.y.qq.com",
+      "c6.y.qq.com",
+      "y.qq.com",
+      "y.gtimg.cn",
+      "*.y.qq.com",
+      "xui.ptlogin2.qq.com",
+      "ssl.ptlogin2.graph.qq.com",
+      "graph.qq.com",
+      "api.tencentmusic.com",
+      "open.weixin.qq.com",
+      "lp.open.weixin.qq.com"
+    ]
+  },
   "settings": [
-    { "key": "loginMethod", "label": "Login method", "help": "Enter QQ or WeChat. Leave empty for QQ.", "helpForText": true, "options": [{ "value": "qq", "label": "QQ" }, { "value": "wechat", "label": "WeChat" }] }
+    {
+      "key": "loginMethod",
+      "label": "Login method",
+      "help": "Enter WeChat for a WeChat QR code; anything else, or nothing, signs in with QQ."
+    }
   ],
   "navigation": [
-    { "builtin": "home" },
-    { "title": "Featured Playlists", "page": "playlists", "icon": "playlist" },
-    { "title": "Charts", "page": "charts", "icon": "chart" },
-    { "builtin": "liked" },
-    { "builtin": "savedAlbums" },
-    { "builtin": "stations" }
+    {
+      "builtin": "home"
+    },
+    {
+      "title": "Featured Playlists",
+      "page": "playlists",
+      "icon": "playlist"
+    },
+    {
+      "title": "Charts",
+      "page": "charts",
+      "icon": "chart"
+    },
+    {
+      "title": "Audiobooks",
+      "page": "audiobooks",
+      "icon": "podcast"
+    },
+    {
+      "builtin": "liked"
+    },
+    {
+      "builtin": "savedAlbums"
+    },
+    {
+      "builtin": "stations"
+    }
   ]
 }

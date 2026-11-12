@@ -6,5 +6,17 @@
   "Recommended for You": "为你推荐",
   "Login method": "扫码登录方式",
   "WeChat": "微信",
-  "Enter QQ or WeChat. Leave empty for QQ.": "输入 QQ 或微信；留空默认 QQ。"
+  "Enter WeChat for a WeChat QR code; anything else, or nothing, signs in with QQ.": "填「微信」用微信扫码；填别的或留空，则用手机 QQ 扫码。",
+  "Sign in to QQ Music": "请先登录 QQ 音乐",
+  "Audiobooks": "听书",
+  "Popular Audiobooks": "热门听书",
+  "Audiobook Categories": "听书分类",
+  "Audiobook Novels": "有声小说",
+  "Storytelling": "评书相声",
+  "Audiobook for Kids": "儿童故事",
+  "History": "历史人文",
+  "Business": "财经商道",
+  "Mystery": "悬疑推理",
+  "Classics": "国学经典",
+  "Life": "情感生活"
 }

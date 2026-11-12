@@ -202,3 +202,19 @@ test('playlists without dirType (current QQ response) are editable', async () =>
   assert.equal((await lib.createPlaylist({ name: 'Mine' })).id, '900');
   await lib.addToPlaylist({ id: '900', trackIds: ['song1'] });
 });
+
+test('saved albums keep released a string when QQ sends a number', async () => {
+  const { lib } = setup(() => { throw new Error('unexpected'); }, signed, { qqAuthCgi: async () => ({
+    code: 0,
+    data: { totalalbum: 2, albumlist: [
+      { albummid: 'AlbumA', albumname: 'A', singers: [{ mid: 'S1', name: 'One' }], release_time: 1632672000, picurl: 'https://p/1.jpg' },
+      { albummid: 'AlbumB', albumname: 'B', singerName: 'Two', publishDate: 20210927 },
+    ] },
+  }) });
+  const page = await lib.savedAlbums({});
+  assert.equal(typeof page.albums[0].released, 'string');
+  assert.equal(page.albums[0].released, '2021-09-27');
+  assert.equal(page.albums[1].released, '2021-09-27');
+  assert.equal(page.albums[1].artists[0].name, 'Two');
+  assert.equal(page.more, false);
+});
